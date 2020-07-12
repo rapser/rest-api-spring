@@ -22,3 +22,7 @@ Instalamos Postgres
 8. Utilizamos esta app para prender o apagar la base de datos
 9. Otra opcion seria solo instalar la base de datos, pero para acceder a la informacion tendriamos que hacerlo por terminal
 8. Podemos utilizar un GUI de base de datos como Navicat
+
+Fuente:
+
+https://www.youtube.com/watch?v=d3lM3w0bl3A
