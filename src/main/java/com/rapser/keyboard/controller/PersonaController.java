@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.rapser.keyboard.model.Persona;
 import com.rapser.keyboard.service.api.PersonaServiceAPI;
 
+import javassist.expr.NewArray;
+
 @Controller
 public class PersonaController {
 	
@@ -27,8 +29,10 @@ public class PersonaController {
 	@GetMapping("/save/{id}")
 	public String showSave(@PathVariable("id") Long id, Model model) {
 		
-		if(id != null) {
+		if(id != null && id != 0) {
 			model.addAttribute("persona", personaServiceAPI.get(id));
+		}else {
+			model.addAttribute("persona", new Persona());
 		}
 		
 		return "save";
